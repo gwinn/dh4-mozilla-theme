@@ -1,0 +1,12 @@
+/* Firefox - new tab background */
+ 
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@-moz-document
+
+url(about:blank),
+url(about:newtab)
+
+{
+  * {background-color: #0D151D !important; color: teal !important;}
+}

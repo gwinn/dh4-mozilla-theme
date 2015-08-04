@@ -1,0 +1,55 @@
+/* Firefox - Remove borders/gradients on tab/nav bars */
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/** Tab bar bottom border **/
+
+/* Pre-Australis */
+
+#nav-bar {
+ margin-top: -1px !important;
+}
+
+#PersonalToolbar ~ #TabsToolbar {
+ padding-bottom: 0 !important;
+ box-shadow: none !important;
+}
+
+/* Australis */
+
+#main-window #TabsToolbar ~ toolbar#nav-bar {
+ margin-top: -1px !important;
+ border-top: 1px solid transparent !important;  /* Firefox 32+ */
+}
+
+#TabsToolbar::after {
+ border-bottom-color: transparent !important;
+}
+
+/** End Tab bar bottom border **/
+
+/** Nav bar top border **/
+
+/* Australis only */
+
+#TabsToolbar ~ #nav-bar {
+ box-shadow: none !important;
+}
+
+/** End Nav bar top border **/
+
+/** Nav bar bottom border **/
+
+:disabled {}
+
+/** End Nav bar bottom border **/
+
+/* Nav bar background */
+
+/* Both Australis and pre-Australis */
+
+#nav-bar {
+ background: none !important;
+}
+
+/** End Nav bar background **/
